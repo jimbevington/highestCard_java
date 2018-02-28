@@ -10,7 +10,12 @@ public class Player {
         this.hand = new Hand();
     }
 
+//    for testing
     public int cardCount(){
         return this.hand.cardCount();
+    }
+
+    public void addCardToHand(Card card){
+        this.hand.addCard(card);
     }
 }
