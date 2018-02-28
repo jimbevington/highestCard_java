@@ -30,5 +30,10 @@ public class Game {
         }
     }
 
+//    public String checkWinner(){
+//        Player player1 = this.players.get(0);
+//        player1.
+//
+//    }
 
 }
