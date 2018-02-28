@@ -23,5 +23,9 @@ public class Player {
         return this.hand.getTotal();
     }
 
+    public int getHighestHandValue(){
+        return this.hand.getHighestValue();
+    }
+
 
 }

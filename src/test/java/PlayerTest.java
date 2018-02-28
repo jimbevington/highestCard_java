@@ -45,5 +45,11 @@ public class PlayerTest {
         assertEquals(18, player.getHandTotal());
     }
 
+    @Test
+    public void canGetHighestHandValue(){
+        player.addCardToHand(card1);
+        player.addCardToHand(card2);
+        assertEquals(10, player.getHighestHandValue());
+    }
 
 }
