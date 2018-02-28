@@ -17,11 +17,18 @@ public class Game {
         deck.populate();
     }
 
+//    for testing
+    public ArrayList<Player> getPlayers() {
+        return this.players;
+    }
+
     public void dealToPlayers(){
+//        deal a card for each player and add it to their Hand
         for (Player player : this.players) {
             Card card = deck.deal();
-
+            player.addCardToHand(card);
         }
     }
+
 
 }
