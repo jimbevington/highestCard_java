@@ -43,4 +43,12 @@ public class HandTest {
         assertEquals(5, hand.getTotal());
     }
 
+    @Test
+    public void canGetHighestValue(){
+        hand.addCard(card);
+        Card card2 = new Card(SuitType.CLUBS, ValueType.FOUR);
+        hand.addCard(card2);
+        assertEquals(4, hand.getHighestValue());
+    }
+
 }

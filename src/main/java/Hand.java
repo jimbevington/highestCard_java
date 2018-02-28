@@ -29,4 +29,14 @@ public class Hand {
         return total;
     }
 
+    public int getHighestValue(){
+        ArrayList<Integer> card_values = new ArrayList<>();
+//        loop over cards and put their values in ArrayList
+        for (Card card : this.cards) {
+            card_values.add(card.getValueFromEnum());
+        }
+//        return the max card value in the list
+        return Collections.max(card_values);
+    }
+
 }
