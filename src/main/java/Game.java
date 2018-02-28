@@ -30,10 +30,21 @@ public class Game {
         }
     }
 
-//    public String checkWinner(){
-//        Player player1 = this.players.get(0);
-//        player1.
-//
+    public String checkWinner(){
+//        assign Player Card Totals to vars
+        int player1Total = this.players.get(0).getHandTotal();
+        int player2Total = this.players.get(1).getHandTotal();
+
+//        check Total vars and return winner
+        if (player1Total > player2Total) {
+            return "Player 1 wins!";
+        }
+        return "Player 2 wins!";
+    }
+
+//    public String play(){
+//        dealToPlayers();
+//        return checkWinner();
 //    }
 
 }
