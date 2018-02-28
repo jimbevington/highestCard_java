@@ -48,4 +48,11 @@ public class GameTest {
         Game game2 = new Game(player1, player2);
         assertEquals("Player 2 wins!", game2.checkWinner());
     }
+
+    @Test
+    public void canPlay(){
+        String result = game.play();
+//        check its returning a "Player x wins!" by checking character count.
+        assertEquals(14, result.length());
+    }
 }

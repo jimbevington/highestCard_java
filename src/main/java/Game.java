@@ -42,9 +42,9 @@ public class Game {
         return "Player 2 wins!";
     }
 
-//    public String play(){
-//        dealToPlayers();
-//        return checkWinner();
-//    }
+    public String play(){
+        dealToPlayers();
+        return checkWinner();
+    }
 
 }
