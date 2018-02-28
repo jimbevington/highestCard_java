@@ -4,8 +4,8 @@ public class Hand {
 
     private ArrayList<Card> cards;
 
-    public Hand(ArrayList<Card> cards){
-        this.cards = cards;
+    public Hand(){
+        this.cards = new ArrayList<>();
     }
 
     public int cardCount(){

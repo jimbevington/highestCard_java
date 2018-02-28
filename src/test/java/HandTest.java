@@ -15,7 +15,7 @@ public class HandTest {
     public void before(){
         card = new Card(SuitType.HEARTS, ValueType.ACE);
         cards = new ArrayList<>();
-        hand = new Hand(cards);
+        hand = new Hand();
     }
 
     @Test
