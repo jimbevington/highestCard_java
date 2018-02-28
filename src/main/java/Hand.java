@@ -16,4 +16,12 @@ public class Hand {
         this.cards.add(card);
     }
 
+    public int getTotal(){
+        int total = 0;
+        for (Card card : this.cards) {
+            total += card.getValueFromEnum();
+        }
+        return total;
+    }
+
 }

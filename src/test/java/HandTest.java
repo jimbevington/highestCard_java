@@ -24,4 +24,23 @@ public class HandTest {
         assertEquals(1, hand.cardCount());
     }
 
+//    @Test
+//    public void canGetTotal__noCards(){
+//        assertEquals(0, hand.getTotal());
+//    }
+
+    @Test
+    public void canGetTotal__1card(){
+        hand.addCard(card);
+        assertEquals(1, hand.getTotal());
+    }
+
+    @Test
+    public void canGetTotal__2cards(){
+        hand.addCard(card);
+        Card card2 = new Card(SuitType.CLUBS, ValueType.FOUR);
+        hand.addCard(card2);
+        assertEquals(5, hand.getTotal());
+    }
+
 }
