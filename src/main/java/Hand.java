@@ -18,8 +18,12 @@ public class Hand {
 
     public int getTotal(){
         int total = 0;
-        for (Card card : this.cards) {
-            total += card.getValueFromEnum();
+//        only loop over cards if there are some.
+        if (this.cards.size() > 0) {
+            for (Card card : this.cards) {
+//                add the card Value to total
+                total += card.getValueFromEnum();
+            }
         }
         return total;
     }

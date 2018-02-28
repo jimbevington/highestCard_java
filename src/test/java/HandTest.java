@@ -24,10 +24,10 @@ public class HandTest {
         assertEquals(1, hand.cardCount());
     }
 
-//    @Test
-//    public void canGetTotal__noCards(){
-//        assertEquals(0, hand.getTotal());
-//    }
+    @Test
+    public void canGetTotal__noCards(){
+        assertEquals(0, hand.getTotal());
+    }
 
     @Test
     public void canGetTotal__1card(){
