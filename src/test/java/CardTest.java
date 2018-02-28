@@ -16,4 +16,9 @@ public class CardTest {
     public void canGetSuit(){
         assertEquals(SuitType.HEARTS, card1.getSuit());
     }
+
+    @Test
+    public void canGetValue(){
+        assertEquals(10, card1.getValueFromEnum());
+    }
 }
