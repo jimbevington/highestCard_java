@@ -13,6 +13,8 @@ public enum ValueType {
     QUEEN(10),
     KING(10);
 
+    private final int value;
+
     ValueType(int value){
         this.value = value;
     }
