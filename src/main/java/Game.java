@@ -41,16 +41,41 @@ public class Game {
         }
     }
 
-    public String checkWinner(){
+//  CHECK WIN methods :-
+
+//      Technically both 1 and 2 card games will work with the checkWinner_cardTotal() method ...
+//      ... but the brief does specify it should be the player with the 'highest card value' who wins the 1 card version.
+
+//      The checkWinner_highestCard() method also allows for alternative versions with multiple card hands where
+//      the winner is the person with the highest single card value.
+
+//      (Just did it for the hell of it really)
+
+
+    public String checkWinner_highestCard(){
+//        assign Highest card value to vars
+        int player1Highest = this.players.get(0).getHighestHandValue();
+        int player2Highest = this.players.get(1).getHighestHandValue();
+
+//        check Highest Card value vars and return winner or draw
+        if (player1Highest == player2Highest) {
+            return "It's a draw!";
+        }
+        if (player1Highest > player2Highest) {
+            return "Player 1 wins!";
+        }
+        return "Player 2 wins!";
+    }
+
+    public String checkWinner_cardTotal(){
 //        assign Player Card Totals to vars
         int player1Total = this.players.get(0).getHandTotal();
         int player2Total = this.players.get(1).getHandTotal();
 
-//        check Total vars and return winner
+//        check Total vars and return winner or draw
         if (player1Total == player2Total) {
             return "It's a draw!";
         }
-
         if (player1Total > player2Total) {
             return "Player 1 wins!";
         }
@@ -59,12 +84,12 @@ public class Game {
 
     public String play_1card(){
         dealToPlayers_1card();
-        return checkWinner();
+        return checkWinner_highestCard();
     }
 
     public String play_2cards(){
         dealToPlayers_2cards();
-        return checkWinner();
+        return checkWinner_cardTotal();
     }
 
 }

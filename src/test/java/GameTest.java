@@ -51,7 +51,7 @@ public class GameTest {
         player1.addCardToHand(card1);
         player2.addCardToHand(card2);
         Game game2 = new Game(player1, player2);
-        assertEquals("Player 1 wins!", game2.checkWinner());
+        assertEquals("Player 1 wins!", game2.checkWinner_highestCard());
     }
 
     @Test
@@ -59,7 +59,7 @@ public class GameTest {
         player1.addCardToHand(card1);
         player2.addCardToHand(card3);
         Game game2 = new Game(player1, player2);
-        assertEquals("Player 2 wins!", game2.checkWinner());
+        assertEquals("Player 2 wins!", game2.checkWinner_highestCard());
     }
 
     @Test
@@ -67,7 +67,7 @@ public class GameTest {
         player1.addCardToHand(card1);
         player2.addCardToHand(card1);
         Game game2 = new Game(player1, player2);
-        assertEquals("It's a draw!", game2.checkWinner());
+        assertEquals("It's a draw!", game2.checkWinner_highestCard());
     }
 
     @Test
@@ -77,7 +77,7 @@ public class GameTest {
         player2.addCardToHand(card2);
         player2.addCardToHand(card4);
         Game game2 = new Game(player1, player2);
-        assertEquals("Player 1 wins!", game2.checkWinner());
+        assertEquals("Player 1 wins!", game2.checkWinner_cardTotal());
     }
 
     @Test
@@ -87,7 +87,7 @@ public class GameTest {
         player2.addCardToHand(card3);
         player2.addCardToHand(card4);
         Game game2 = new Game(player1, player2);
-        assertEquals("Player 2 wins!", game2.checkWinner());
+        assertEquals("Player 2 wins!", game2.checkWinner_cardTotal());
     }
 
 }
